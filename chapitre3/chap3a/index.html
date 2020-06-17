@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<div id="mon-app">
+<a v-bind:href="google">Google</a>
+<a :href="udemy">udemy</a>
+</div>
+<body>
+	<!-- Ajout du CLI vueJS-->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el:"#mon-app", 
+			data:{
+				montext:"Wello Word !!",
+				google:"http://google.com",
+				udemy:"https://www.udemy.com/"
+			},
+			methods:{
+				premier:function(a,b) {
+					return this.montext
+					// utilisation des parametres 2 et 4 demande le resultat il affiche 6
+				}
+			}
+		})
+	</script>
+</body>
+</html>

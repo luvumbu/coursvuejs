@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<div id="mon-app">
+	<p>{{premier()}}</p>
+</div>
+<body>
+	<!-- Ajout du CLI vueJS-->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el:"#mon-app", 
+			data:{
+				montext:"Wello Word !!"
+			},
+			methods:{
+				premier:function() {
+					return "Bonjour a vous hahha"
+				}
+			}
+		})
+	</script>
+</body>
+</html>
