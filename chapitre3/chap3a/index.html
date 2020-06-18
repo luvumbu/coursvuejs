@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Lier les source</title>
 </head>
 <div id="mon-app">
 <a v-bind:href="google">Google</a>
 <a :href="udemy">udemy</a>
+<img :src="img" alt="" srcset="">
 </div>
 <body>
 	<!-- Ajout du CLI vueJS-->
@@ -18,13 +19,8 @@
 			data:{
 				montext:"Wello Word !!",
 				google:"http://google.com",
-				udemy:"https://www.udemy.com/"
-			},
-			methods:{
-				premier:function(a,b) {
-					return this.montext
-					// utilisation des parametres 2 et 4 demande le resultat il affiche 6
-				}
+				udemy:"https://www.udemy.com/",
+				img:"https://i.pinimg.com/474x/17/9c/5a/179c5ae585b11fec7ca4053996d9619d.jpg"
 			}
 		})
 	</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Possition de la sourie utilisation mousemove</title>
+</head>
+<body>
+<div id="mon-app" v-on:mousemove="moves">
+	<div>
+		{{x}}/{{y}}
+	</div> 
+</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el:"#mon-app", 		
+			data:{
+				valeur:"",
+			},
+			data: {
+					x:"",
+					y:""
+			},
+			methods: {
+	 moves : function(e) {
+		 this.x=e.offsetX;
+		 this.y=e.offsetY;
+	}
+ }		
+		})
+	</script>
+</body>
+</html>

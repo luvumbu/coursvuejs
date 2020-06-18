@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stoper propagation</title>
+</head>
+<body>
+	<div id="mon-app">
+ 
+<div v-on:click.stop="sames">
+	<p> 
+		Lorem ipsu 
+		<button v-on:click.stop="sames" style="position: absolute;top:0;right:0">
+Sames
+		</button>
+	</p>
+
+</div>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el:"#mon-app", 		
+			data:{
+				valeur:"",
+			},
+			data: {
+ 
+			},
+			methods: {
+	 sames : function() {
+ console.log("Once oncly");
+	}
+ }		
+		})
+	</script>
+</body>
+</html>

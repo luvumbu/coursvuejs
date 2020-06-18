@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Addition calcul d'une fonction</title>
+	<title>function v-on</title>
 </head>
 <div id="mon-app">
-	<p>{{premier(2,4)}}</p>
-	<!-- utilisation d'un variable avec parametres 2 et 4-->
+ <div    v-on:click="click1">Action click 1</div>
+ <button v-on:click="click2">Action click 2</button>
 </div>
 <body>
 	<!-- Ajout du CLI vueJS-->
@@ -17,11 +17,13 @@
 			el:"#mon-app", 
 			data:{
 				montext:"Wello Word !!"
-			},
-			methods:{
-				premier:function(a,b) {
-					return a+b
-					// utilisation des parametres 2 et 4 demande le resultat il affiche 6
+			} , 
+			methods: {
+				click1:function() {
+					alert("Action click 1") ;
+				} ,
+				click2:function() {
+					alert("Action click 2") ;
 				}
 			}
 		})

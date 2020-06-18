@@ -3,25 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ajout d'une fonction</title>
+	<title>execution d'une fonction juste une fois</title>
 </head>
-<div id="mon-app">
-	<p>{{premier()}}</p>
-</div>
 <body>
-	<!-- Ajout du CLI vueJS-->
+	<div id="mon-app">
+		<div  v-on:click.once="once">
+			ONCE CLICK
+		 </div>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script>
 		new Vue({
-			el:"#mon-app", 
+			el:"#mon-app", 		
 			data:{
-				montext:"Wello Word !!"
+				valeur:"",
 			},
-			methods:{
-				premier:function() {
-					return "Bonjour a vous hahha"
-				}
-			}
+			data: {
+ 
+			},
+			methods: {
+	 once : function() {
+ console.log("Once oncly");
+	}
+ }		
 		})
 	</script>
 </body>

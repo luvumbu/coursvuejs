@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Addition calcul d'une fonction</title>
+	<title>affiche en direct la valeur dune variable au changement v-model</title>
 </head>
 <div id="mon-app">
-	<p>{{premier(2,4)}}</p>
-	<!-- utilisation d'un variable avec parametres 2 et 4-->
+<input type="text" v-model="montext">
+<div>{{montext}}</div>
 </div>
 <body>
 	<!-- Ajout du CLI vueJS-->
@@ -17,12 +17,6 @@
 			el:"#mon-app", 
 			data:{
 				montext:"Wello Word !!"
-			},
-			methods:{
-				premier:function(a,b) {
-					return a+b
-					// utilisation des parametres 2 et 4 demande le resultat il affiche 6
-				}
 			}
 		})
 	</script>
